@@ -1,0 +1,33 @@
+package chap_02;
+
+public class _04_Operator4 {
+	public static void main(String[] args) {
+		// 논리 연산자 
+		boolean 치킨 = true;
+		boolean 피자 = true;
+		boolean 탕수육 = true;
+		
+		System.out.println(치킨 && 피자 && 탕수육); // 최고의 식단 모두 true 일떄. 
+		System.out.println(치킨 || 피자 || 탕수육); // 괜찮은 식단  하나라도 true 일때.
+		System.out.println("======== &&연산 =======");
+		
+		// And 연산
+		System.out.println((5 > 3) && (3 > 1)); // true && true == true 
+		System.out.println((5 < 3) && (3 > 1));  // false && true == false인 순간 연산하지 않는다
+		System.out.println("======= || 연산 ========");
+		// Or 연산
+		System.out.println((5 > 3) || (3 > 1));  // true || true == true
+		System.out.println((5 < 3) || (3 > 1));  // false || true == true
+		System.out.println((5 < 3) || (3 < 1));  // false || false == false
+		System.out.println("========논리부정 연산자=======");
+		// 논리 부정 연산자
+		System.out.println(!true);
+		System.out.println(!false);
+		System.out.println(!(5 == 5));
+		System.out.println(!(5 == 3));
+		
+
+		
+	}
+
+}
