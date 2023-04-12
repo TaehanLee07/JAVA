@@ -1,0 +1,34 @@
+package chap_01;
+
+public class _05_VariNaming {
+	public static void main(String[] args) {
+//		변수이름 짓는법 
+//		1.저장할 값에 어울리는 이름을 넣는다
+//		2.밑줄(_) 문자(ABC) 숫자(123) 사용 가능 (공백사용불가)
+//		3.밑줄 또는 문자로 시작가능 (숫자로 시작하는 변수명은 안됨)
+//		4.한 단어 또는 2개 이상의 단어의 연속
+//		5.소문자로 시작 각 단어 시작글자는 대문자
+//		6.예약어 사용불가 (int boolean true false double float)
+		
+//		입국 심사
+		String nationality = "대한민국"; // 국적
+		String first_Name = "길동"; // 이름
+		String last_Name = "홍"; // 성
+		String date_Of_Birth = "2007-10-13"; // 생년월일
+		String residentialAddress = "신라호텔"; // 체류지
+		String purposeOfVisit = "관광"; // 관광목적
+		String flightNo = "KE657"; // 항공편
+		String flightno = "KE657"; 
+//		String 2flight_No_2 = "KE657"; 변수명 은 숫자로 시작할수없다
+//		String -flightNo = "KE657"; 언더바를 제외한 특수문자로 변수명을 시작할수없다
+		
+//		프로그램의 흐름을 위해 사용되는 경우 (크게 이름이 중요하지 않을 떄)
+		int i = 0;
+		String s = "abc";
+		String ss = "Hello";
+		
+		// 절대 변하지 않는 상수는 대문자로 쓴다
+		final String CODE = "KR";
+	}
+
+}
