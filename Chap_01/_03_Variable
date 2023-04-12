@@ -1,0 +1,36 @@
+package chap_01;
+
+public class _03_Variable {
+	public static void main(String[] args) {
+		// 변수의 선언과 할당
+		// 변수타입 변수이름 = 값;
+		
+		String name = "홍길동";
+		int hour = 15; 
+		
+		System.out.println(name + "님 배송이 시작됩니다 " + hour + " 시에 방문 예정입니다 ");
+		System.out.println(name + "님 배송이 완료되었습니다");
+		double score = 91.55;
+		char grade = 'A';
+		name = "이태한";
+		System.out.println(name + "님의 평균점수는"+ score + "점 입니다 따라서 귀하의 학점은" + grade + "입니다");
+		
+		boolean pass = true;
+		System.out.println(name + "님은 이번 시험에 합격했을까요? " + pass);
+		
+		double d = 3.1525111552;
+		float f = 3.152511152f; // 뒤에 f를 붙혀 float 형으로 변환
+		System.out.println(d);
+		System.out.println(f);
+		
+		//int i = i00000000000;
+		long l = 100000000000l;
+		long l2 = 123450000000000l;
+		long l3 = 100_000_000_000l;
+		
+		byte b = 127;
+		short s = 255;
+		
+	}
+
+}
