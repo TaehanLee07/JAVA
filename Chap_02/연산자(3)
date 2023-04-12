@@ -1,0 +1,46 @@
+package chap_02;
+
+import java.util.logging.Handler;
+
+public class _03_Operator3 {
+	public static void main(String[] args) {
+		// 비교 연산자 
+		// (int)형 정수형
+		System.out.println((5>3)); // // 5는 3 보다 크다 (참이면 true 거짓이면 false)
+		System.out.println((5>=3)); // // 5는 3 보다 크거나 같다 (참이면 true 거짓이면 false)
+		System.out.println((5>=7)); // 5는 7 보다 크거나 같다 (참이면 true 거짓이면 false)
+		
+		System.out.println(5<3);  // 3은 5 보다 다 (참이면 true 거짓이면 false)
+		System.out.println(5<=3); // // 5는 7 보다 작거나 같다 (참이면 true 거짓이면 false)
+		
+		System.out.println(5 == 5); // 5는 5와 같다 (참이면 true 거짓이면 false)
+		System.out.println(5 == 3); // 5는 3과 같다 (참이면 true 거짓이면 false)
+		System.out.println(5 != 5); // 5는 5와 같지않다 (참이면 true 거짓이면 false)
+		System.out.println(5 != 3); // 5는 3관 같지않다 (참이면 true 거짓이면 false)
+		
+		// 참조형 데이터 타입에서는 비교 연산자를 사용할수 있을까?
+		// 참조형은 == 문 과 != 만 사용할수있다 
+		
+		// (char) 형
+		System.out.println('A' < 'B'); 
+		// A는 아스키 코드값이 65 이고 B는 66이기 때문에 true 65 < 66 식으로 생각하면 쉽다
+		System.out.println('0' == 0); 
+		// '0'의 아스키코드값은 48이기에 '0' == 0 은 48 == 0 과 같다.
+		
+		// 실수 타입
+		System.out.println(10.0d == 10.0f);
+		// 10.0d == 10.0f 는 10.0d == 10.0d
+		System.out.println(0.1d == 0.1f);
+		// 0.1d == 0.1f 는 0.1d == 0.1d
+		
+		System.out.println(0.1d);
+		System.out.println(0.1f);
+		System.out.println((double)0.1f); 
+		
+		
+		// float을 double 로 형변환 시킬떄 소수점 뒷자리에 값이 추가 될수있다
+		
+		
+	}
+
+}
