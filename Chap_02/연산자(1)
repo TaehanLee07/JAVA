@@ -1,0 +1,77 @@
+package chap_02;
+
+public class _01_Operator1 {
+	public static void main(String[] args) {
+		// 산술연산 이항연산
+		System.out.println(4 + 2);
+		System.out.println(4 - 2);
+		System.out.println(4 * 2);
+		System.out.println(4 / 2);
+		System.out.println(5 % 2);
+		System.out.println(8 % 3);
+		System.out.println(-8 % -3);
+	
+		
+		// 우선순위 연산
+		System.out.println(2 + 2 * 2);
+		System.out.println((2 + 2) * 2);
+		
+		// 변수를 이용한 연산 
+		int num1 = 20;
+		int num2 = 10;
+		int rst;
+		rst = num1 + num2;
+		System.out.println(rst); // 20 + 10 =30
+		
+		rst = num1 - num2;
+		System.out.println(rst); // 20 -10 = 10
+		
+		rst = num1 * num2;
+		System.out.println(rst); // 20 * 10 = 200 
+		
+		rst = num1 / num2;
+		System.out.println(rst); // 20 / 10 = 2 
+		
+		rst = num1 % num2;
+		System.out.println(rst); // 20 % 10 = 0
+		
+		// 증감 연산자 ++ , -- 
+		System.out.println("=======증가연산자++======");
+		int val;
+		val = 10;
+		System.out.println(val); // 10
+		System.out.println(val++); // 10: 문장이 실행된 이후 증가 시켜라
+		System.out.println(val); // 11
+		
+		val = 10;
+		
+		System.out.println(val); // 10
+		System.out.println(++val); // 11: 문장이 끝나기 전에 증가시켜라
+		System.out.println("======감소연산자--======");
+		/* 증감연산자 위치에 따라 두가지 유형으로 분류
+		 * 증가연산자(++) 연산자의 값을 1 증가시킨다.
+		 * 감소연산자(--) 연산자의 값을 1 감소시킨다.
+		 *  
+		 *
+		 * 전위형 값이 참조 되기전에 증가 시킨다. ++i
+		 * 후위형 값이 참조된 후에 증가 시킨다. i++
+		 */
+		
+		val = 10;
+		System.out.println(val); // 10
+		System.out.println(--val); // 9
+		
+		val = 10;
+		System.out.println(val); // 10
+		System.out.println(val--); // 10
+		System.out.println(val); // 9
+		
+		// 은행대기표
+		int wait = 0;
+		System.out.println("대기인원"+wait++); // 0
+		System.out.println("대기인원"+wait++); // 1
+		System.out.println("대기인원"+wait++); // 2
+		System.out.println("총 대기 인원 " + wait+ "명"); // 3명
+	}
+
+}
