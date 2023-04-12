@@ -1,0 +1,16 @@
+package chap_01;
+
+public class _06_Constants {
+	public static void main(String[] args) {
+		// 절떄 바꾸지 못한다 final 
+		final String KR_COUNTRY__CODE = "82";
+		System.out.println(KR_COUNTRY__CODE);
+		
+		final double PI = 3.1415926535;
+		System.out.println(PI);
+		
+		final String DATE_OF_BIRTH = "2007-10-13";
+		System.out.println(DATE_OF_BIRTH);
+	}
+
+}
