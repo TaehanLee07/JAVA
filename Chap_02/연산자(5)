@@ -1,0 +1,28 @@
+package chap_02;
+
+public class _05_Operator5 {
+	public static void main(String[] args) {
+		// 삼합 연산자
+		// 결과 = (조건) ? (참 일 경우 결과값) : (거짓 일 경우 결과값)
+		int a = 3;
+		int y = 5;
+		int max = (a > y) ? a : y;
+		System.out.println(max);
+		
+		int min = (a < y) ? a : y;
+		System.out.println(min);
+		
+		boolean b = (a == y) ? true : false;
+		System.out.println(b);
+		
+		int num = -10;
+		// 삼합 연산자를 num 과 같이 음수 양수 상관없이 절대값을 계산해서  absNum 에 넣기
+		int numcal = (num < 0) ? num * -1 : num * 1;
+		int absnum = numcal;
+		System.out.println(absnum);
+		
+		
+		
+	}
+
+}
