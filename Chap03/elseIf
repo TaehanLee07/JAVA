@@ -1,0 +1,64 @@
+package chap_04;
+
+/*
+ * if (조건) {
+ * 	조건1이 true 일떄 실행
+ * } else if (조건2) {
+ *	
+ *	 else if (조건3) {
+ *
+ *   else if (조건4) {
+ *   
+ *   else if (조건5) {
+ *   
+ *   }
+ *   }
+ * }
+ *	
+ * 
+ */
+public class _03_elseIf {
+	public static void main(String[] args) {
+		
+		// 카페라뗴가 있으면 카페라떼 주문
+		// 카페모카가 있으면 카페모카 주문
+		// 둘다 없으면 아메리카노 주문
+		boolean cafelatte = true;
+		boolean cafemocha = true;
+		if (cafelatte) {
+			System.out.println("카페라떼 주문");
+		} else if (cafemocha ) {
+			System.out.println("카페모카 주문");
+		} else {
+			System.out.println("아메리카노 주문");
+			
+			
+	}
+		System.out.println("주문완료");
+		
+		//음료수 추가
+		cafelatte = false;
+		cafemocha = false;
+		boolean tea = true;
+		
+		if (cafelatte) {
+			System.out.println("카페라떼 주문");
+		} else if (cafemocha) {
+			System.out.println("카페모카 주문");
+			
+		} else if (tea ){
+			System.out.println("차 주문");
+			// else 는 상황에 따라 없을 수도 있다
+
+		} 
+		System.out.println("주문 완료");
+	}
+}
+
+
+
+
+
+
+
+
