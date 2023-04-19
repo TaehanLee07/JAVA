@@ -1,0 +1,48 @@
+package chap_04;
+
+public class _01_if {
+	public static void main(String[] args) {
+		// 조건문 if 
+		int hour = 10; // 오후 3시를 뜻하는 변수
+		
+		// 성일카펭서 오후2시 이전에는 아메리카노를 1+1
+		
+		/*
+		 *  if문 내에서 하나의 문장을 실행할때는 중괄호 생략 가능. if(조건식) {
+		 *  if 문 내 두가지 이상의 문장을 실행할때는 불가
+		 *  실행할코드
+		 *   }
+		 */
+		
+		if (hour< 14) {
+			System.out.println("아메리카노 1+1 ");
+			
+			
+		
+		if (hour < 10) {
+			System.out.println("아메리카노 1+1");
+			System.out.println("샷 추가!!");
+		
+		
+			
+		}
+		
+		System.out.println("========");
+
+		
+		// 오후 2시 이전 까지 모닝커피를 마시지 않은경우
+		hour = 10;
+		boolean morningcoffee = false;
+		if (hour < 14 && morningcoffee == false) {
+//		if (hour < 14 && !morningcoffee) {
+			System.out.println("아메리카노 1+1");
+		}
+		
+		if (hour > 14 || morningcoffee) {
+			System.out.println("500원 할인");
+		}
+		
+	}
+
+}
+}
