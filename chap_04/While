@@ -1,0 +1,40 @@
+package chap_04;
+
+public class _06_While {
+	public static void main(String[] args) {
+		// 반복문 while 
+		// 수영장에서 수영하는 상황
+		// 수영장 길이 25미터 
+		int cnt = 0;
+		int dis = 150; // 전체거리 25m
+		int move = 0; // 현재 이동거리
+		while (move < dis) {
+			System.out.println("스트로클합니다");
+			System.out.println("현재거리" + move);
+			move+=3;
+			cnt++;
+			
+		}
+		System.out.println(cnt +"초에 도착");
+		System.out.println("===============");
+		
+		move = 0;
+		while (move < dis) {
+			System.out.println("스트로클 합니다");
+			System.out.println("현재이동거리" + move);
+			move+=3;
+			if (move == 15) {
+				break;
+			}
+			
+		}
+	}
+
+}
+/*
+ *  while (조건식) { 
+ *  반복할 문장
+ * 
+ * 
+ * } 
+ */
