@@ -1,0 +1,31 @@
+package chap_04_;
+
+public class _Quiz_04 {
+
+	public static void main(String[] args) {
+		// 주차요금 시간당 4000원 최대요금은 30000원
+		// 경차또는 장애인차량은 요금의 50%할인
+		// 일반차량은 5시간 주차시 2만원
+		// 경차 5시간 주차시 1만원
+
+		// 주차요금은 XX원입니다
+
+		int hour = 10;
+		boolean isSmallCar = false;
+		boolean withDisabledPerson = false;
+
+		int fee = hour * 4000;
+		// 주차요금을 계산하는 프로그램을 짜고
+		// 3만원 초과시 일일 최대 요금으로 수정
+		if (fee > 30000) {
+			fee = 30000;
+		}
+
+		if (isSmallCar || withDisabledPerson) {
+			fee /= 2;
+		}
+		System.out.println("주차요금은" + fee + "원 입니다");
+
+	}
+
+}
