@@ -1,0 +1,55 @@
+package chap_05_;
+
+public class _02_arrayLoop {
+	
+	public static void main(String[] args) {
+		
+		String[] coffees = {"아메리카노","카페모카","라떼","카푸치노"};
+		
+		
+		// i > 0 -> 1 -> 2 -> 3 -> 4일떄 아웃
+		for (int i = 0; i < 4; i++) {
+			System.out.println(coffees[i]);
+			
+		}
+		System.out.println("주세요!");
+		
+		System.out.println(coffees.length);
+		System.out.println("===============");
+		
+		for (int i = 0; i < coffees.length; i++) {
+			System.out.println(coffees[i] + " 하나 ");
+			
+		}
+		System.out.println("주세요!");
+		
+		// for-each 반복문 
+		for (String coffee : coffees) {
+			System.out.println(coffee+"하나");
+		}
+		System.out.println("주세요");
+		
+		System.out.println("===============");
+		
+		double[] date = new double[5];
+		date[0] = 10.0;
+		date[1] = 12.9;
+		date[2] = 10.3;		
+		date[3] = 14.3;
+		date[4] = 11.3;
+		
+		for (int i = 0; i < date.length; i++) {
+			if (i == date.length -2)
+				break;
+			System.out.println(date[i]);
+			
+		}
+		
+		
+		
+		
+		
+		
+	}
+
+}
