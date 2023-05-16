@@ -1,0 +1,20 @@
+package exam;
+
+public class ex_06 {
+	
+	public static void main(String[] args) {
+		
+		System.out.println('S'+'U'+'N'+'G'+'I'+'L');
+		
+		char s = 'S';
+		char u = 'U';
+		char n = 'N';
+		char g = 'G';
+		char i = 'I';
+		char l = 'L';
+		
+		System.out.println(s+u+n+g+i+l);
+	
+	}
+
+}
