@@ -1,0 +1,25 @@
+package test;
+
+import java.util.*;
+
+public class Ex_01 {
+	public static void main(String[] args) {
+		
+		// 1에서 9 까지 숫자중에 번호를 입력받아 그 번호의 해당하는 구구단 출력
+		Scanner sc = new Scanner(System.in);
+		int a = sc.nextInt();
+		
+		for (int i = a; i <= a; i++) {
+			for (int j = 1; j < 10; j++) {
+				System.out.println(a + " X " + j + " = " + a * j);
+				
+			}
+			
+		}
+		
+		
+		sc.close();
+		
+	}
+
+}
