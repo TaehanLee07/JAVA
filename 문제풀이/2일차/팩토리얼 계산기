@@ -1,0 +1,32 @@
+package test;
+
+import java.util.Scanner;
+
+public class Ex06 {
+	// 팩토리얼 계산기
+	// 5! = 5 * 4 * 3 * 2 * 1
+	// 어떤수 num 을 입력받으면 그 수의 팩토리얼을 출력
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("팩토리얼을 구할수를 입력해주세요");
+		int num = sc.nextInt();
+		int fact = 1; // 누적곱을 구할땐 항상 1로 초기화
+//		int sum = 0;	// 누적합을 구할떈 항상 0으로 초기화
+		int first = num;
+
+		while (num > 1) {
+			fact = fact * num;
+			num--;
+		}
+
+//		for (int i = num; i > 1; i++) {
+//			fact = fact * num;
+//			
+//		}
+
+		System.out.println(first + "! 값은 : " + fact);
+
+	}
+
+}
