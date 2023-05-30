@@ -2,34 +2,36 @@ package test;
 
 public class Ex08 {
 	public static void main(String[] args) {
-		
-		
+
 		// 주사위 두개를 던져서 합이 6이되는 경우를 모두 출력하시오
 		int cnt = 0;
-		
+
 		for (int i = 1; i < 7; i++) {
 			for (int j = 1; j < 7; j++) {
-				if(i + j == 6) {
+				if (i + j == 6) {
+					System.out.println("("+ i + "," + j +")");
 					cnt++;
 				}
-				
+
 			}
-			
+
 		}
 		System.out.println(cnt);
-		
+
+		System.out.println("====================================");
 		// 주사위 세개를 던져서 합이 10되는 경우를 모두 출력하시오
-		int cnt2= 0;
+		int cnt2 = 0;
 		for (int i = 1; i < 7; i++) {
 			for (int j = 1; j < 7; j++) {
 				for (int k = 1; k < 7; k++) {
-					if(i + j + k == 10) {
+					if (i + j + k == 10) {
+						System.out.println("("+ i + "," + j + "," + k+")");
 						cnt2++;
 					}
 				}
-			
+
 			}
-			
+
 		}
 		System.out.println(cnt2);
 	}
