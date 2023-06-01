@@ -1,0 +1,36 @@
+package test;
+
+import java.util.Scanner;
+
+public class Ex03 {
+
+	public static void main(String[] args) {
+
+//		최대 100개까지의 정수를 차례로 입력받다가 0이 되면 입력을 중단하고
+//		짝수 번째 입력된 정수를 모두 출력하는 프로그램 작성
+		Scanner sc = new Scanner(System.in);
+
+		int numbox[] = new int[100];
+		int index = 0;
+
+		for (index = 0; index < numbox.length; index++) {
+			numbox[index] = sc.nextInt();
+
+			if (numbox[index] == 0) {
+				break;
+
+			}
+
+		}
+		for (int i = 0; i < numbox.length; i++) {
+			if (numbox[index] % 2 ==0) {
+				System.out.println(numbox[i]);
+				
+				
+			}
+			
+		}
+
+	}
+
+}
