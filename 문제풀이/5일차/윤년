@@ -1,0 +1,38 @@
+package test;
+
+import java.util.Scanner;
+
+public class Ex05 {
+	public static void main(String[] args) {
+		// 연도와 월을 입력받아 월의 날짜수를출력하다가 0을 입력하면 종료하는 프로그램
+		// 0을 잘못입력하면 잘못입력했습니다
+
+		// 1. 윤년을 판단하는 조건문 작성
+		// 2. 2월은 무조건 28일을 출력
+		// 2-1 4년 마다 100년 단위는 윤년이다
+		// 3. 윤년을 판단해서 28일 && 29일 구분하여 출력
+
+		Scanner month = new Scanner(System.in);
+		Scanner year = new Scanner(System.in);
+		System.out.println("년도를 입력해주세요 :");
+		int years = year.nextInt();
+		System.out.println("월을 입력해주세요 :");
+		int months = year.nextInt();
+
+		if (years % 400 == 0 == true || years % 4 == 0 == true && months == 2 == true ) {
+			System.out.println("윤년이고 일수는 29일 입니다");
+			if (months == 1 || months == 3 || months == 5 || months == 7 || months == 8 || months == 10 || months == 12) {
+				System.out.println(years + "년"+ months +"일의 날짜수는 31일 입니다");
+				if (months == 4 || months == 6 || months == 9 || months == 11) {
+					System.out.println(years + "년"+ months +"일의 날짜수는 30일 입니다");
+					
+					
+				}
+				
+				
+			}
+		}
+
+	}
+
+}
