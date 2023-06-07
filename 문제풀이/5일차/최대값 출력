@@ -1,0 +1,25 @@
+package test;
+
+import java.util.Scanner;
+
+public class x06 {
+
+	public static void main(String[] args) {
+
+		// 10개의 정수를 입력받고 num에 저장
+		// 입력받은 10개중 가장 큰수를 저장
+		Scanner sc = new Scanner(System.in);
+		int nums[] = new int[10];
+		int max = -1;
+		for (int i = 0; i < nums.length; i++) {
+			nums[i] = sc.nextInt();
+			if (nums[i] > max) {
+				max = nums[i];
+
+			}
+
+		}
+		System.out.println("최대값은 " + max + " 입니다");
+	}
+
+}
