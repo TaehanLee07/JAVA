@@ -1,0 +1,26 @@
+package chap_06;
+
+public class _01_Method {
+	// 메소드는 클래스내에 있는 함수이다
+	// 자바에서 함수는 클래스내에서만 존재할수있다
+	// 자바에 한해서 함수를 메소드라고 한다
+
+	public static void main(String[] args) {
+		System.out.println("main입니다");
+		
+		System.out.println("메소드 호출전");
+		hello(); // 메소드 호출
+		hello(); // 메소드 호출
+		hello(); // 메소드 호출
+		System.out.println("메소드 호출후");
+
+		
+		
+
+	}
+	public static void hello() {
+		System.out.println("Hello World!!");
+		
+	}
+
+}
