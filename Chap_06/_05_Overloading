@@ -1,0 +1,37 @@
+package chap_06;
+
+public class _05_Overloading {
+	
+	// method 오버로딩 같은이름의 메소드를 여러번 선언
+	//1. 파라미터의 타입이 달라야함 ||
+	//2. 파라미터의 개수가 달라야함
+	public static int getpower(int num) { // num == 파라미터 매개변수
+		int result = num * num;
+		return result;
+	}
+	public static int getpower(String num1) {
+		int num = Integer.parseInt(num1); 
+		int result = num * num;
+		return result;
+	}
+	
+	
+	
+	public static int getpower(int num, int exp) {
+			int res = 1;
+			for (int i = 0; i < exp; i++) {
+				  res = res * num;
+				 
+			}
+			return res;
+
+
+	}
+	
+	public static void main(String[] args) {
+		
+		System.out.println(getpower(5));
+		System.out.println();
+	}
+
+}
