@@ -1,0 +1,29 @@
+package chap_06;
+
+public class _03_return {
+	
+	public static String getPhoneNum() {
+		String PhoneNum = "02-5160-2767";
+		return PhoneNum;
+	}
+	
+	public static String getAddress() {
+		return "서울시 광남구";
+	}
+	
+	public static String getActivity() {
+		return "볼링장, 탁구장, 볼링장, 노래방";
+		
+	}
+	
+	public static void main(String[] args) {
+		String PhoneNum = getPhoneNum();
+		System.out.println(PhoneNum);
+		
+		String address = getAddress();
+		System.out.println(address);
+		
+		System.out.println(getActivity());
+	}
+
+}
