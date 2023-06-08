@@ -1,0 +1,30 @@
+package chap_06;
+
+public class _04_ParameterAndReturn {
+	
+
+	public static int getpower(int num) { // num == 파라미터 매개변수
+		int result = num * num;
+		return result;
+	}
+
+	public static int getpowerByExp(int num, int exp) {
+			int res = 1;
+			for (int i = 0; i < exp; i++) {
+				  res = res * num;
+				 
+			}
+			return res;
+
+
+	}
+	public static void main(String[] args) {
+		int val = getpower(5);
+		System.out.println(val);
+		
+		System.out.println(getpower(7));
+		
+		val = getpowerByExp(4, 3);
+		System.out.println(val);
+	}
+}
