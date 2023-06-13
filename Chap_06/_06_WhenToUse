@@ -1,0 +1,40 @@
+package chap_06;
+
+public class _06_WhenToUse {
+	
+	
+	public static int  gotPower(int num) {
+//		int result = num * num;
+//		return result;
+		return gotPower(num,2);	// a메소드 안에서 다른 메세지 호출이 가느
+		
+	}
+	
+	public static int gotPower(int num, int exp) {
+		
+		int result =1;
+		for(int i = 0; i < exp; i++)
+			result *= num;
+		return result;
+		
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		// 메소드가 필요한 이유
+		// 반복되는 코드의 중복을 줄일수 있다
+		// 수정사항발생시 유지보수가 쉬어짐
+		// 11의 제곱
+		
+		System.out.println(gotPower(11));
+		
+		//		2의 2제곱
+	
+		System.out.println("Main :");
+		System.out.println("Method :" + gotPower(2, 2));
+		
+		
+	}
+
+}
