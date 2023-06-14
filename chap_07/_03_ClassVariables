@@ -1,0 +1,33 @@
+package chap_07;
+
+public class _03_ClassBariables {
+	
+	public static void main(String[] args) {
+		
+		BlackBox b1 = new BlackBox();
+		b1.modelName = "White";
+		//b1.canAutoReport = false;
+		BlackBox b2 = new BlackBox();
+		b2.modelName = "Black";
+		//b2.canAutoReport = false;
+		
+		// 자동신고기능 개발 여부
+		
+		System.out.println(b1.canAutoReport);
+		
+		System.out.println(b1.modelName + "의 자동신고기능 :" + b1.canAutoReport);
+		System.out.println(b2.modelName + "의 자동신고기능 :" + b2.canAutoReport);
+		
+		// 기능개발 완료
+//		b1.canAutoReport = true;
+//		b2.canAutoReport = true;
+		BlackBox.canAutoReport = true; // 이러면 모든 canAutoReport가 true
+		
+		// 자동신고기능 개발 여부
+		
+		System.out.println(b1.modelName + "의 자동신고기능 :" + b1.canAutoReport);
+		System.out.println(b2.modelName + "의 자동신고기능 :" + b2.canAutoReport);
+
+	}
+
+}
