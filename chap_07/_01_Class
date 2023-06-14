@@ -1,0 +1,35 @@
+package chap_07;
+
+public class _01_Class {
+	public static void main(String[] args) {
+		
+//		C언어 = 절차형언어
+// 		자바, 파이썬, C++, C#등의 객체지양 언어
+//		유지보수성	
+//		높은 재사용성
+		
+		// 차랑용 블랙박스 〓 = 
+		// 모델명, 해상도, 가격, 해상도
+		
+		// 제품1
+		String modelName = "검정이";
+		String resolution = "FHD";
+		int price = 20000;
+		String color = "Black";
+		
+		// 신제품
+		String modelName2 = "하양이";
+		String resolution2 = "UHD";
+		int price2 = 20000;
+		String color2 = "White";
+		
+		// 새로운 제품을 만든다면?
+		
+		BlackBox bBox = new BlackBox();
+//		BlackBox 클래스로 부터 bbox 개채 생성 bbox 는 blackbox 클래스의 인스턴스 이렇게 만드는것을 인스턴스화 라고한다
+		
+		BlackBox bBox2 = new BlackBox();
+		
+	}
+
+}
