@@ -11,5 +11,21 @@ public class BlackBox {
 	// 모든개체에 공통적으로 필요한변수는 클래스이다 클랫,
 	
 	static boolean canAutoReport = false;
+	
+	void autoReport() {
+		// 자동출동감지기구 여부확인
+		if(canAutoReport == true) {
+			System.out.println("충돌감지기능이 활성화되었습니다");
+		}
+		else{
+			System.out.println("충돌감지기능이 활성화되었습니다");
+		}
+			
+	}
+	
+	
+	void insertMemoryCard(int capacity) {
+		System.out.println("메모리 카드가 삽입되었습니다 용량은 : " + capacity + "GB 입니다" );
+	}
 
 }
