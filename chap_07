@@ -1,0 +1,11 @@
+package chap_07;
+
+public class _01_Class {
+	public static void main(String[] args) {
+		
+//		C언어 = 절차형언어
+// 		자바, 파이썬, C++, C#등의 객체지양 언어
+		
+	}
+
+}
