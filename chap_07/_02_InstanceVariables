@@ -1,0 +1,36 @@
+package chap_07;
+
+public class _02_InstanceVariables {
+	
+	// 인스턴스
+	
+	public static void main(String[] args) {
+		
+		// 첫 제품
+		BlackBox b1 = new BlackBox();
+		b1.modelName = "오베시티 블랙박스";
+		b1.price = 51200;
+		b1.color = "Pink";
+		b1.resolution = "512 X 512 ";
+		
+		System.out.println(b1.modelName);
+		System.out.println(b1.price);
+		System.out.println(b1.color);
+		System.out.println(b1.resolution);
+		
+		System.out.println("======================="); 
+		
+		// 두번째 제품
+		
+		BlackBox b2 = new BlackBox();
+		b2.modelName = "Obesity";
+		b2.price = 5120;
+		b2.resolution = "QHD";
+		b2.color = "red";
+		
+		
+		
+		System.out.println(b2.modelName);
+	}
+
+}
