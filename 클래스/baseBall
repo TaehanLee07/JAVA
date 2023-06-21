@@ -1,0 +1,50 @@
+package games;
+
+import java.util.Scanner;
+
+public class BaseBall {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		// 변수
+		// 랜덤으로 뽑을 3자리의수 수를 저장하기위한 변수
+		int randomNum[] = new int[3];
+		// 유저가 입력한수를 저장하기위한 배열
+		int userNums[] = new int[3];
+		// 스트라이크와 볼의개수를 저장하기위한변수
+
+		int strike = 0;
+		int ball = 0;
+
+		// 1단계 랜덤수의 반복문을이용허여 3개의수를 할당
+		// 2단계 입력받은수 3개가 서로다른 정수이다
+		for (int i = 0; i < randomNum.length; i++) {
+			randomNum[i] = (int) (Math.random() * 9) + 1;
+			for (int j = 0; j < i; j++) {
+				if (randomNum[j] == randomNum[i]) {
+					i--;
+					break;
+				}
+
+			}
+			
+
+		}
+		for (int i2 = 0; i2 < userNums.length; i2++) {
+			System.out.println(i2 +1 +"번째입력");
+			userNums[i2] = sc.nextInt();
+			for (int j = 0; j < i2; j++) {
+				if (userNums[j] == userNums[i2]) {
+					i2--;
+					break;
+				}
+				
+			}
+
+		}
+
+	}
+
+}
