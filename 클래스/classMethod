@@ -1,0 +1,25 @@
+package chap_07;
+
+public class _06_classMethod {
+	
+	public static void main(String[] args) {
+		
+		BlackBox bbox = new BlackBox();
+		bbox.modelName = "까망이";
+		bbox.resolution = "FHD";
+		bbox.price = 1000;
+		System.out.println(bbox.modelName);
+		
+		
+//		클래스 필드는 클래스이름 피르로 접근   
+		System.out.println(BlackBox.canAutoReport);
+		BlackBox.canAutoReport = true;
+		bbox.autoReport();
+		bbox.insertMemoryCard(512);
+		int fileCount= bbox.getVideoFileCount(0);
+		System.out.println(fileCount);
+		
+		BlackBox.callServiceCenter();
+	}
+
+}
