@@ -1,0 +1,41 @@
+package games.word;
+
+import java.util.Scanner;
+
+public class Player {
+	
+	Scanner sc = new Scanner(System.in);
+	
+	public boolean surrenStatues = false;
+	
+	public String name;
+	public String word;
+	
+	public String goodGame = "GG";
+	
+	public String sayWord() {
+		word = sc.next();
+		return word;
+	}
+	
+	public boolean checkWord(char lastChar) {
+		if (lastChar == word.charAt(0)) {
+			return true;
+			
+		}else {
+			return false;
+		}
+	}
+	
+	public boolean surrender() {
+		
+		if(word == "GG") {
+			System.out.println(name + " 님이 서렌치셨습니다.");
+			surrenStatues = true;
+			
+		}
+		return false;
+		
+	}
+
+}
