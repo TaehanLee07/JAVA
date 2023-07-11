@@ -1,0 +1,30 @@
+package javaBasic;
+
+import java.util.Scanner;
+
+public class _04_Quiz {
+
+	// 정수 n을입력받고 1부터 홀수만 차레대로 구하면서 합이 n보댜 크면 그 떄까지 더한
+//	홀수의개수와 그합을 구하시오
+// 입력 : 1000 / 출력 32, 1024
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		int n = sc.nextInt();
+		int cnt = 0;
+
+		int sum = 0;
+
+		for (int i = 1; ; i+=2) {
+			if (i % 2 == 0 == false) {
+				sum = sum + i;
+				cnt++;
+			}
+			if (sum >= n) {
+				break;
+			}
+		}
+		System.out.println("홀수의개수:" + cnt + "합 :" + sum);
+	}
+}
