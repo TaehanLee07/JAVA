@@ -1,0 +1,23 @@
+package javaBasic;
+
+import java.util.Scanner;
+
+public class _06_Quiz {
+	
+	// 팩토리얼 계산기
+	// num을입력받으면 그수의 팩토리얼을 구하는 문제
+	public static void main(String[] args) {
+		
+	Scanner sc = new Scanner(System.in);
+	int num = sc.nextInt();
+	int factorial = 1;
+	
+	while (num > 1) {
+		factorial = factorial * num;
+		num--;
+	}
+	
+	System.out.println(factorial);
+
+	}
+}
