@@ -1,0 +1,25 @@
+package javaBasic;
+
+import java.util.Scanner;
+
+public class _02_Quiz {
+	
+	public static void main(String[] args) {
+		
+		// 총학생의수를 입력받음 해당학생들의 성적을 입력받아 총점과 평균을 구하시오.
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("총학생수를 입력하시오");
+		int totalStudent = sc.nextInt();
+		
+		int score;
+		int sum = 0;
+		
+		for (int i = 0; i < totalStudent; i++) {
+			score = sc.nextInt();
+			sum = sum + score;
+		}
+		System.out.printf("총 %d명의 학생의 총점은 %d이고, 평균은 %f 점이다",totalStudent,sum,(double)sum/totalStudent);
+	}
+
+}
