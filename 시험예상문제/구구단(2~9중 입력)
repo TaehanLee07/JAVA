@@ -1,0 +1,20 @@
+package javaBasic;
+
+import java.util.Scanner;
+
+public class _01_Quiz {
+	// 2에서 9중 번호를 입력받아 그번호에 해당하는 구구단 출력
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		int dan = sc.nextInt();
+		
+		for (int i = 1; i <=9; i++) {
+			System.out.println(dan + "*" + i + "=" + (dan*i));
+			
+		}
+		
+	}
+
+}
