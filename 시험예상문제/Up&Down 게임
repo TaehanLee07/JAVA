@@ -1,0 +1,37 @@
+package javaBasic;
+
+import java.util.Scanner;
+
+public class _05_Quiz {
+	
+	// Up && Down Game
+	// 1부터 100까지의 정수중 랜덤으로 수를 부여받는다
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		int cnt =0;
+		int ranNum = (int)(Math.random() * 100) + 1;
+		
+		for (int i = 0; ; i++) {
+			System.out.println("정답을 입력해주세요 : ");
+			int ans = sc.nextInt();
+			if (ans == ranNum) {
+				System.out.println("정답입니다 시도횟수 :"+ cnt);
+				sc.close();
+				break;
+			} else if (ans >= ranNum) {
+				System.out.println("CPU : down");
+				cnt++;
+			} else if (ans <= ranNum) {
+				System.out.println("CPU : up");
+				cnt++;
+			} 
+			
+			
+		}
+		
+
+	}
+
+}
