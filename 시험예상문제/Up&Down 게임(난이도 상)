@@ -1,0 +1,27 @@
+package javaBasic;
+
+import java.util.Scanner;
+
+public class _03_Quiz {
+	
+	//값을 하나 입력받고 1부터 1씩 증가하면서 누적합
+	//입력받은값보다 누적합이 커지는 순간 반복중단
+	//마지막으로 더해진값과 총합을 구하시오
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		int num = sc.nextInt();
+		int sum = 0;
+		
+		int i;
+		for (i = 1; ; i++) {
+			if (sum > num) {
+				break;
+			}
+			sum = sum + i;
+			
+		}
+		System.out.println(i-1 + "," + sum);
+	}
+
+}
