@@ -1,0 +1,34 @@
+package test2;
+
+import java.util.Scanner;
+
+public class Ex01 {
+	
+	public static void main(String[] args) {
+		// 어떤숫자를 입력받고 1부터해당숫자까지의 홀수의 합과 짝수의합을 구하시오
+		
+		Scanner sc = new Scanner(System.in);
+		int num = sc.nextInt();
+		
+		int holnum = 0;
+		int zzaknum = 0;
+		
+		
+		for (int i = 1; i <= num; i++) {			
+			
+			if (i % 2 ==0) {
+				zzaknum = zzaknum += i;
+				
+			}
+			if (!(i % 2 == 0)) {
+				holnum = holnum += i;
+			}
+			
+		}
+		
+		System.out.printf("짝수의합은 %d이고 홀수의합은 %d이다",zzaknum,holnum);
+		
+		
+	}
+
+}
