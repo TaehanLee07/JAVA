@@ -1,0 +1,43 @@
+package test2;
+
+import java.util.Scanner;
+
+public class Ex02 {
+
+	// 랜덤 자리 뽑기
+	// 행과 열을 입력받음 전체자리수가 행 * 열 랜덤한 자리로 1부터 행*열까지의 수를 임의로 부여함
+	// 예를 들어 3행3열
+	// 9 7 5
+	// 1 4 6
+	// 3 2 8
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("가로");
+		int row = sc.nextInt();
+		System.out.println("세로");
+		int cols = sc.nextInt();
+		
+		int[] seats = new int[row * cols];
+		
+		for (int i = 0; i < seats.length; i++) {
+			seats[i] = (int)(Math.random() * (row * cols))+1;
+			for (int j = 0; j <i; j++) {
+				if(seats[i] == seats[j]) {
+					i--;
+				}
+			}
+		}
+		
+		for (int i = 0; i < seats.length; i++) {
+			System.out.printf("%4d",seats[i]);
+			if(i!=0 && (i+1)%cols ==0) {
+				System.out.println();
+			}
+		}
+		
+	
+	}
+
+}
