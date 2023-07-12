@@ -1,0 +1,45 @@
+package test2;
+
+import java.util.Scanner;
+
+public class Ex04 {
+
+	// 메소드를 이용하여 계산기 만들기 1.두개의 정수를 입력받음 사칙연산을 선택함 (+ - * /)
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("정수를 입력하세요");
+		double a = sc.nextDouble();
+		double b = sc.nextDouble();
+
+		System.out.println("사칙연산 (+, -, *, /)");
+		String s = sc.next();
+
+		if (s.contains("+") == true)
+			plus(a,b);
+		else if (s.contains("-") == true)
+			minus(a,b);
+		else if (s.contains("*") == true)
+			multiple(a,b);
+		else
+			divid(a,b);
+
+	}
+
+	public static void plus(double a, double b) {
+		System.out.println(a + b);
+	}
+
+	public static void minus(double a, double b) {
+		System.out.println(a - b);
+	}
+
+	public static void multiple(double a, double b) {
+		System.out.println(a * b);
+	}
+
+	public static void divid(double a, double b) {
+		System.out.println(a / b);
+	}
+
+}
