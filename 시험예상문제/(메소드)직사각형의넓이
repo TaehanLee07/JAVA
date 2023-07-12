@@ -1,0 +1,24 @@
+package test2;
+
+import java.util.Scanner;
+
+public class Ex03 {
+	
+	// 직시긱형의 넓이를 구하는(메소드사용)
+	// main 에서 area 메소드 호출 area 메소드는 가로세로길이를 파라미터로 받아서 넓이값을 리턴해주는 메소드
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+
+		
+		System.out.println(area(a, b));
+	}
+	
+	public static int area(int len, int height) {
+		
+		return len * height;
+		
+	}
+}
