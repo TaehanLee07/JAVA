@@ -1,0 +1,31 @@
+package classExam;
+
+public class nullex {
+
+    // 자바에서 비어있음의 의미로 null 이 사용되낟
+    //참조형변수에만 널값을 넣을수있다
+
+    public static void main(String[] args) {
+//        Person p1 = null;
+//        System.out.println(p1);
+//        p1.getName();
+        //만약 null 을 보광ㄴ하고 있는 변수의 메소드를 호츨하면 오류남 ㅋ
+        // : NullPointerException
+
+        Person[] peoples = new Person[5];
+        peoples[0] = new Person("홍길동",52);
+        peoples[2] = new Person("장발장",29);
+        peoples[3] = new Person("임꺽정",66);
+        for (int i = 0; i < peoples.length; i++) {
+            Person p = peoples[i];
+
+            if (peoples[i] == null) {
+                System.out.println(i + "번지는 비어있음");
+            }else{
+                System.out.println(p.getName());
+            }
+
+        }
+
+    }
+}
