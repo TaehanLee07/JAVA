@@ -1,0 +1,13 @@
+package classExam;
+
+import java.util.ArrayList;
+
+public class ArrayListEx {
+
+    //    배열의 단점때문에 arraylist 사용
+    //    배열은 프로그램에서 사용하려면 항상 길이를 정해두고 시작해야한다
+    //    예를 들어 100명을 위한 프로글매은 만들었는데 전학온학생으로 인해 코드를 수정해야한다
+    //    혹은 중산에 학생한명이전학을 갔을떄 ㄱ배열은 중간에 비어있는 요소를 비워둘수 엇으므로
+    //    두개다 배열을 수정해야하기때문에 자바는 객체 배열 클래스 Arraylist를 제공한다
+    // 선언 방법 e는 클래스값 inteager 이런거ArrayList<E> 배열이름 = new ArrayList<E>();
+}
