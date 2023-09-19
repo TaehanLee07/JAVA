@@ -1,0 +1,14 @@
+package classExam;
+
+public class Ex02 {
+
+    public static void main(String[] args) {
+        boolean newboolean = (7>5) && (2<2) && (10 == 10); // 숏석인 연산
+        System.out.println(newboolean);
+//        boolean chk = m1() && m2() && m3();
+//        식의 결과값이 이미 결정된 겨우 자바는 연산은 멈춘다
+//        이렇게 미리멈추는것은 숏서킷연산이라고 한다
+//        boolean chk = m1() || m2() || m3();
+
+    }
+}
