@@ -1,0 +1,25 @@
+public class _01_Class {
+    public static void main(String[] args) {
+        // 객체 지향 프로그램(OOP) Object oriented Programing
+        // 유지보수 좋음 재사용성이 높음
+
+        // 차랑용 블랙박스
+        // 모델명, 해상도, 가격, 색상
+
+        // 첫번째 제품
+        String modelName = "까망이";
+        String resolution = "FULL HD";
+        int price = 200000;
+        String colors = "black";
+
+        // 신제품 개발
+
+        String modelName2 = "하양이";
+        String resolution2 = "UHD";
+        int price2 = 300000;
+        String colors2 = "white";
+
+        // 또 새로운 제품을 만들면?
+
+    }
+}
