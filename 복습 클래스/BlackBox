@@ -1,0 +1,37 @@
+public class BlackBox {
+
+    String modelName;   // 이름
+    String resolution;  // 해상도
+    int price;  // 가격
+    String colors;  // 색
+    // 클래스 변수
+    static boolean canAutoReport = false;  // 자동신고기능
+
+    // 메서드
+    void autoReport() {
+        if(canAutoReport) {
+            System.out.println("출동이 감지되어 자동으로 신고합니다");
+        }
+        else {
+            System.out.println("자동 신고 기능이 지원 되지 않습니다");
+        }
+    }
+
+    void insertMemoryCard(int capacity) {
+        System.out.println("메모리카드가 삽입되었습니다");
+        System.out.println("용량은 " + capacity + " GB 입니다");
+
+
+    }
+
+    int getVideoFileCount(int type) {
+        if(type == 1) {
+            return 9;   // type 1 = 일반영상
+        }
+        else if(type == 2) {
+            return 2;   // 사건영상
+        }
+        return  11;
+    }
+
+}
