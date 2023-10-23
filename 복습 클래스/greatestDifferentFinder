@@ -1,0 +1,44 @@
+package exam;
+
+public class greatestDifferentFinder {
+
+
+//    void greatestDifferent(int[] intArr1) {
+//        int resNum = 0;
+//        int highNum = -1;
+//        int lowNum = 999;
+//
+//        for (int i = 0; i <intArr1.length ; i++) {
+//            if (intArr1[i] > highNum) {
+//                intArr1[i] = highNum;
+//            } else if (intArr1[i] < lowNum) {
+//                intArr1[i] = lowNum;
+//            }
+//        }
+//        System.out.println("최대값은 " + highNum + " 최솟값은 " + lowNum + " 차이는 " + (highNum - lowNum));
+//    }
+    int greatestDifferent(int[] intArray) {
+        if(intArray.length < 2) {
+            return  0;
+        }
+        int max = intArray[0];
+        int min = intArray[0];
+
+        for (int i = 0; i < intArray.length ; i++) {
+            if (max < intArray[i]) {
+                max = intArray[i];
+            }
+            if (min > intArray[i]) {
+                min = intArray[i];
+            }
+
+        }
+        return max - min;
+    }
+
+
+}
+
+
+
+// 파라미터로 정수배열 intArr 을 받고 두원소의 차이중 가장 큰 값을 리턴해주는 gD 메서드를 만드시오 리턴의 자료형은 int 만약원소의 개수가 2개보다 작으면 0을 리턴
