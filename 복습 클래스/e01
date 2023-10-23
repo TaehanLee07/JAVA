@@ -1,0 +1,13 @@
+package exam;
+
+public class e01 {
+
+    public static void main(String[] args) {
+
+        greatestDifferentFinder finder = new greatestDifferentFinder();
+
+        // test 1
+        int[] testArr1 = {-2,7,3};
+        System.out.println(finder.greatestDifferent(testArr1));
+    }
+}
