@@ -4,8 +4,11 @@ public class BlackBox {
     String resolution;  // 해상도
     int price;  // 가격
     String colors;  // 색
+
+    int serialNumber;   // 일련번호
     // 클래스 변수
     static boolean canAutoReport = false;  // 자동신고기능
+    static int counter = 0; // 시리얼 번호 생성 역할 (처음엔 0이었다가 ++ 연산자를 통해 값을 증가시킨다)
 
     // 메서드
     void autoReport() {
@@ -63,4 +66,25 @@ public class BlackBox {
         canAutoReport = true;
     }
 
+    // 생성자가 없는 경우에는 자바가 기본 생성자를 자동으로 생성 및 호출한다.
+    // 개발자가 생성자를 만든 경우에는 기본 생성자를 자동으로 생성해주지 않는다.
+    // 생성자 오버로딩 가능하다.
+    BlackBox() {
+        System.out.println("기본생성자 호출");
+        this.serialNumber = ++counter;
+        System.out.println("새로운 시리얼 넘버를 발급받았습니다 시리얼 넘버 = " + this.serialNumber );
+    }
+
+    BlackBox(String modelName, String resolution, int price, String colors) {
+        this(); // 기본생성자 호출방법
+        this.modelName = modelName;
+        this.resolution = resolution;
+        this.price = price;
+        this.colors = colors;
+        System.out.println("사용자 정의 호출");
+    }
+
+    public void appendModelName(String modelName) {
+        this.modelName += modelName;    // this 는 현재 열려있는 클래스를 가리킨다
+    }
 }
