@@ -69,6 +69,12 @@ public class BlackBox {
     // 생성자가 없는 경우에는 자바가 기본 생성자를 자동으로 생성 및 호출한다.
     // 개발자가 생성자를 만든 경우에는 기본 생성자를 자동으로 생성해주지 않는다.
     // 생성자 오버로딩 가능하다.
+
+
+    BlackBox(String modelName, String resolution, int price) {
+        this(modelName,resolution,price, "블랙");
+    }
+
     BlackBox() {
         System.out.println("기본생성자 호출");
         this.serialNumber = ++counter;
