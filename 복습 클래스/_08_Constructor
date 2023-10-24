@@ -17,5 +17,8 @@ public class _08_Constructor {
         System.out.println(b2.modelName);
         System.out.println(b2.serialNumber);
 
+        BlackBox b3 = new BlackBox("까망이2","FULL HD",600000);
+        System.out.println(b3.colors);
+
     }
 }
