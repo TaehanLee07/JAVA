@@ -1,0 +1,32 @@
+import java.sql.Time;
+import java.util.Locale;
+import java.util.Random;
+
+public class _11_Package {
+    public static void main(String[] args) {
+
+        // 패키지 : 자바 클래스들을 비슷한 것들끼리 정리해주는 하나의 폴더
+
+
+        // 랜덤 클래스
+        Random random = new Random();
+        System.out.println("랜덤정수 : " + random.nextInt()); // int의 범위
+        System.out.println("랜덤정수 (범위): " + random.nextInt(10)); // 0이상 10미만의 정수
+        System.out.println("랜덤실수 (범위): " + random.nextDouble()); // 0.0 이상 1.0 미만의 실수값
+        System.out.println("랜덤실수 (범위): " + random.nextDouble(10.0)); // 0.0 이상 1.0 미만의 실수값
+
+        // 5.0 이상 10.0 미만
+        System.out.println("랜덤실수 (범위): " + random.nextDouble(5.0,10.0));
+
+        // 로또 번호 뽑기 1~45 겹처도 가능
+        System.out.println("로또 번호: " + random.nextInt(1,46));
+
+        // Math, Scanner, StringBuffer, StringBuilder
+        // BigInteager BigDecimal
+        // LocalDate, LocalTime, LocalDateTime
+
+
+
+
+    }
+}
