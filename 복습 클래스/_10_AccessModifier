@@ -1,0 +1,22 @@
+import chap_class.BlackBoxRefurbish;
+
+public class _10_AccessModifier {
+
+    public static void main(String[] args) {
+
+        // 캡슐화 필요한 것들끼이만서로 연관된 것들끼리만 하나의 캡슐에 담는다.
+        // 정보 은닉 : 정보를 숨기는 것이다.
+
+        // 접근제어자
+        // public : 모든클래스 에서 접근 가능함
+        // protected : 같은 패키지 내에서는 접근 가능 다만 다른 패키지인 경우에 자식클래스에서 접근 가능
+        // default : (아무것도 적지않았을떄) 같은 패키치 내에서만 접근 가능
+        // private : 해당 클래스 내에서만 접근 가능
+
+        BlackBoxRefurbish b1 = new BlackBoxRefurbish();
+        b1.modelName = "까망이";
+//        b1.resolution = "FULL HD";
+//        b1.setPrice(200000);
+//        b1.colors = "흰색";
+    }
+}
