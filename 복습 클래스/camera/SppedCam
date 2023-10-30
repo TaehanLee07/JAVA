@@ -1,0 +1,27 @@
+package camera;
+
+public class SppedCam {
+
+    public String name;
+
+    public SppedCam() {
+        this.name = "과속단속 카메라";
+    }
+
+    public void takePicture() {
+        // 사진촬영
+    }
+
+    public void recordVideo() {
+        // 동영상 녹화
+    }
+
+    public void checkSpped() {
+        System.out.println("속도를 측정합니다");
+    }
+
+    public void recongizeLicnesePlate(){
+        // 번호인식
+        System.out.println("차량번호를 인식합니다");
+    }
+}
