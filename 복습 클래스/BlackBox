@@ -90,6 +90,46 @@ public class BlackBox {
         System.out.println("사용자 정의 호출");
     }
 
+    String getModelName() {
+        return modelName;
+    }
+
+    void setModelName(String ModelName) {
+        this.modelName = modelName;
+    }
+
+    int getPrice() {
+        return price;
+    }
+
+    void setPrice(int price) {
+        if (price < 100000) {
+            this.price = 100000;
+        } else {
+            this.price = price;
+        }
+
+    }
+
+    String getColors() {
+        return colors;
+    }
+
+    void setColors(String colors) {
+        this.colors = colors;
+    }
+
+    String getResolution() {
+        if (resolution == null || resolution.isEmpty()) {
+            return "판매자에게 문의하세요.";
+        }
+        return resolution;
+    }
+
+    void setResolution(String resolution) {
+        this.resolution = resolution;
+    }
+
     public void appendModelName(String modelName) {
         this.modelName += modelName;    // this 는 현재 열려있는 클래스를 가리킨다
     }
