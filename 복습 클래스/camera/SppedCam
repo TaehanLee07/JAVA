@@ -1,19 +1,9 @@
 package camera;
 
-public class SppedCam {
-
-    public String name;
+public class SppedCam extends Camera{
 
     public SppedCam() {
         this.name = "과속단속 카메라";
-    }
-
-    public void takePicture() {
-        // 사진촬영
-    }
-
-    public void recordVideo() {
-        // 동영상 녹화
     }
 
     public void checkSpped() {
@@ -23,5 +13,10 @@ public class SppedCam {
     public void recongizeLicnesePlate(){
         // 번호인식
         System.out.println("차량번호를 인식합니다");
+    }
+
+    @Override // annotation
+    public void showMainFeature() {
+        System.out.println(this.name + "의 주요 기능 : 속도 측정, 번호 인식");
     }
 }
