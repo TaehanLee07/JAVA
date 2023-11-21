@@ -1,0 +1,34 @@
+package ArrayList;
+
+public class Book {
+
+    private String BookName;
+    private String Author;
+
+    public Book() {}
+
+
+    public Book(String bookName, String author) {
+        BookName = bookName;
+        Author = author;
+    }
+
+    public String getBookName() {
+        return BookName;
+    }
+
+    public void setBookName(String bookName) {
+        BookName = bookName;
+    }
+
+    public String getAuthor() {
+        return Author;
+    }
+
+    public void setAuthor(String author) {
+        Author = author;
+    }
+    public void showBookInfo() {
+        System.out.println(BookName + ", " + Author);
+    }
+}
