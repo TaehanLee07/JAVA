@@ -1,0 +1,40 @@
+package ArrayList;
+
+import java.util.ArrayList;
+
+public class Ex05 {
+
+    public static int getSurvivngIndex(int n, int k) {
+       ArrayList<Integer> soldier = new ArrayList<>();
+
+        for (int i = 1; i <= n; i++) {
+            soldier.add(i);
+        }
+
+        ArrayList<Integer> corpse_list = new ArrayList<>();
+        while (n >= 2) {
+            for (int i = 1 ; i <= k-1; i++) {
+                soldier.add(soldier.get(0));
+                soldier.remove(0);
+            }
+            corpse_list.add(soldier.get(0));
+            soldier.remove(0);
+            n--;
+        }
+        for (Integer corpse : corpse_list) {
+            System.out.println(corpse + "번 군사가 죽습니다");
+        }
+        return soldier.get(0);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(getSurvivngIndex(8,3));
+        System.out.println(getSurvivngIndex(20,5));
+    }
+}
+
+// 전쟁에서 처참하게 패배를 격고 돌아온 김장군 책임을 지기위해 돌아온 이들에게
+// 자결을 제안한다 n 명의 군사들이 동그랗게 서있고 한명씩 세워나가서 매 k번쨰 사람이 죽기로한다
+// 예를 들어 8명의 군사들이 있고 매 3명마다 죽기로 하면 아래 순서로 군사들이 죽게된다. 3 > 6 >1 > 5 > 2 > 8 > 4 > 7
+// 하지만 야비한 김장군 은 자신이 마지막으로 남아서 도망가려는 속셈이다. 파라미터 로 정수 n과 정수 k를 받고 김장군이 살기 위해서
+// 서 있어야할 자리 (int)를 리턴해주는 메소드를 만드시오 단 ArrayList를 사용할 것
