@@ -1,0 +1,31 @@
+package oop;
+
+public class musicPlayerData {
+
+    boolean isOn;
+    int volume;
+
+    void on() {
+        isOn = true;
+    }
+
+    void off() {
+        isOn = false;
+    }
+
+    void volUp() {
+        volume++;
+    }
+
+    void volDown() {
+        volume--;
+    }
+
+    void showState() {
+        if (isOn)
+            System.out.println("음악플레이어 상태 : On 볼륨 : " + volume);
+        else
+            System.out.println("음악플레이어 상태 : On 볼륨 : " + volume);
+    }
+
+}
