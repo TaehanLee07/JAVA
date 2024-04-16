@@ -10,10 +10,10 @@ public class musicPlayerMain3 {
         // 끄기 off (data)
 
         musicPlayerData data = new musicPlayerData();
-        data.isOn = false;
-        data.volume = 10;
+        data.off();
         data.on();
         data.volUp();
+        data.volDown();
         data.showState();
     }
 
