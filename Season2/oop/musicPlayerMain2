@@ -1,0 +1,22 @@
+package oop;
+
+public class musicPlayerMain2 {
+    public static void main(String[] args) {
+        musicPlayerData mD = new musicPlayerData();
+        mD.isOn = true;
+        mD.volume = 70;
+        if (mD.isOn)
+            System.out.println("음악플레이어 On");
+        else
+            System.out.println("음악플레이어 Off");
+        System.out.println("현재 볼륨은 : " + mD.volume);
+
+        mD.volume--;
+        System.out.println("현재 볼륨은 : " + mD.volume);
+        mD.volume++;
+        System.out.println("현재 볼륨은 : " + mD.volume);
+
+    }
+
+
+}
