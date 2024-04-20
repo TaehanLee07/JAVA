@@ -76,7 +76,7 @@ hasNext()는 있으면 true 없으면 false 반환 한다
 
 Iterator iter = set.Iterator();
 
-while(iter,hasNext()) {
+while(iter.hasNext()) {
 	System.out.println(iter.next())
 }
 
