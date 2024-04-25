@@ -25,3 +25,6 @@ private > defualt > protected > public 순 접근 난이도
 
 접근 제어자는 필드와 메서드, 생성자에 사용된다.
 클래스 레벨에도 일부 접근 제어자를 사용할 수 있다. (public ,default)
+
+필드 값은 무조건 private 다른곳에서 수정하면 안된다
+기능들은 public 이지만 간단한 메소드만 공개 정말 세세한거 까지 공개 할 필요 X (예 : 오버클럭)
