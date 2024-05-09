@@ -10,7 +10,7 @@ public class PolyMain {
 
       다형성 2가지 핵심 이론
       다형적 참조
-    * */
+    */
     public static void main(String[] args) {
         // 부모 인스턴스 참조
         System.out.println("Parent -> Parent");
@@ -30,5 +30,8 @@ public class PolyMain {
         // poly.childMethod 오류 발생 즉 자식의 기능은 호출할 수 없다.
 
         // Child child1 = new Parent(); 오류 발생 즉 자식은 부모를 담을 수 없다.
+ 
+        // Upcasting : 생략 가능
+        // Downcasting : 부모 타입을 잠깐 자식 타입으로
     }
 }
