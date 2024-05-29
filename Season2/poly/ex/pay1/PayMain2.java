@@ -6,7 +6,7 @@ public class PayMain2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         PayService payService = new PayService();
-        for (int i = 0; i < 1;) {
+        for (int i = 0; i < 1;) { // 무한루프를 신기하게 만들어 보고 싶어서 이렇게 만들어보았다
 
             System.out.println("결제 수단을 입력하세요");
             String payOption = sc.next();
