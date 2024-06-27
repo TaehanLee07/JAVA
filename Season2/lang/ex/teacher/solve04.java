@@ -22,14 +22,14 @@ public class TexMath {
                 placeVal *= 10;
             }
 
-            // 알파벳 값을 오름차순 정력
-            Arrays.sort(alpha);
-
-            int ans = 0;
-            for (int i = 0; i < 10; i++) {
-                ans = ans + alpha[25-i] * (9-i);
-            }
-            System.out.println(ans);
         }
+        // 알파벳 값을 오름차순 정력
+        Arrays.sort(alpha);
+
+        int ans = 0;
+        for (int i = 0; i < 10; i++) {
+            ans = ans + alpha[25-i] * (9-i);
+        }
+        System.out.println(ans);
     }
 }
