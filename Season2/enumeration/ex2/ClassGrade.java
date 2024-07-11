@@ -8,7 +8,7 @@ public class ClassGrade {
     private ClassGrade() {
     }
 }
-
+// 타입 완전형 열거형 타입 완성
 
 
 /*
