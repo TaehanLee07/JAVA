@@ -1,12 +1,14 @@
 package lang.Math.test;
 
+import java.util.Arrays;
+
 public class LottoGeneratorMain {
     public static void main(String[] args) {
         LottoGenerator generator = new LottoGenerator();
         int[] lottoNums = generator.generate();
-
+        Arrays.sort(lottoNums); // 정렬
         for (int lottoNumber : lottoNums) {
-            System.out.println(lottoNumber + " ");
+            System.out.print(lottoNumber + " ");
         }
     }
 }
