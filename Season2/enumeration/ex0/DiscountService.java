@@ -14,14 +14,8 @@ public class DiscountService {
      else {
         System.out.println("에러!!");
     }
-        
-        
         return price * discountPercent / 100;
-
     }
-
-
-
 }
 
 /*
