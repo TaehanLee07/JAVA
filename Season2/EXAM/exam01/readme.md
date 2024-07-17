@@ -8,7 +8,7 @@
   - Movie: 감독( director ), 배우 ( actor )
 
 ShopMain.java
-
+```
 package extends1.ex;
 
 public class ShopMain {
@@ -26,7 +26,7 @@ public class ShopMain {
         System.out.println("상품 가격의 합: " + sum);
     }
 }
-
+```
 
 실행 결과
 이름:JAVA, 가격:10000
