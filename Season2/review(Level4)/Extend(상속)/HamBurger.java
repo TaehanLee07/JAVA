@@ -2,11 +2,10 @@ package review.extend;
 
 public class HamBurger {
     String name;
-
     public HamBurger() {
         this.name = "햄버거";
     }
-
+    
     public HamBurger(String name) {
         this.name = name;
     }
