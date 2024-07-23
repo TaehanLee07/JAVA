@@ -28,5 +28,4 @@ public class SpeedCam extends Camera implements Detectable, Reportable{
         System.out.println("리포터 객체 설정");
         this.reporter = reporter;
     }
-
 }
