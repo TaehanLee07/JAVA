@@ -2,6 +2,7 @@ package class1;
 
 public class Class_Start4 {
 	public static void main(String[] args) {
+		// 배열을 이용한 클래스 사용
 		Student stu1 = new Student(); 
 		stu1.stu_name = "홍길동";
 		stu1.age = 15;
