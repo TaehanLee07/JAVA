@@ -30,3 +30,12 @@
 ---
 
 - **선언 방법** : `HashSet<클래스> 변수명 = new HashSet<클래스>();`
+
+### HasgSet의 메소드
+---
+
+- `add(value)` : 값 추가
+- `remove(value)` : value 값 제거
+- `clear()` : 모든 값 삭제
+- `size()` : HashSet 크기
+- `contains(value)` : value 값이 있는 지 확인
