@@ -1,7 +1,6 @@
 package oop.exam;
 
 public class Account {
-
     int balance; // 잔액
 
     //입금 메서드
@@ -17,6 +16,5 @@ public class Account {
             balance -= amount;
         }
         return balance;
-
     }
 }
