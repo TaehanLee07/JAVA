@@ -9,7 +9,7 @@ public class musicPlayerMain3 {
         // 상태보기 showState
         // 끄기 off (data)
 
-        musicPlayerData data = new musicPlayerData();
+        MusicPlayerData data = new MusicPlayerData();
         data.off();
         data.on();
         data.volUp();
