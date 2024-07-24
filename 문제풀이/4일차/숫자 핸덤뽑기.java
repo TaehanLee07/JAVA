@@ -2,7 +2,6 @@ package test;
 
 public class Ex11 {
 	public static void main(String[] args) {
-		
 		// 1부터 10까지 의 정수중에서 래너믕로 뽑기 세 개의수가 서로 겹치지 않게 출력
 		int range = 10;
 		int start = 1;
@@ -16,30 +15,15 @@ public class Ex11 {
 		b = (int)(Math.random() * range + start);
 		c = (int)(Math.random() * range + start);
 		
-		
-		while (a == b || a == c || b == c == true) {
-			
-				a = (int)(Math.random() * range + start);
-				b = (int)(Math.random() * range + start);
-				c = (int)(Math.random() * range + start);
-				if (a == b || a == c || b == c == false) {
-					break;
+		while (a == b || a == c || b == c == true) {	
+			a = (int)(Math.random() * range + start);
+			b = (int)(Math.random() * range + start);
+			c = (int)(Math.random() * range + start);
+			if (a == b || a == c || b == c == false) {
+				break;
 					
-				}
-									
-				}
-			
-				System.out.printf("%d,%d,%d",a,b,c);
-
+			}					
 		}
-
-		
-		
-				
-		
-	
-	
-	
+		System.out.printf("%d,%d,%d",a,b,c);
 	}
-
-
+}
