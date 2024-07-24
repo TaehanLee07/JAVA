@@ -1,8 +1,6 @@
 # 요구사항
     
-    ---
-    
-    - 은행 계좌를 객체로 설계하기.
+    은행 계좌를 객체로 설계하기.
     1. Account 클래스 생성
         1. int balance : 잔액
         2. deposit(int amount) : 입금 메서드
