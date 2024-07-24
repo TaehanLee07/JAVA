@@ -11,6 +11,5 @@ public class BookMain {
 
         Book book3 = new Book("jpa 프로그래밍", "Kim" , 700);
         book3.displayInfo();
-
     }
 }
