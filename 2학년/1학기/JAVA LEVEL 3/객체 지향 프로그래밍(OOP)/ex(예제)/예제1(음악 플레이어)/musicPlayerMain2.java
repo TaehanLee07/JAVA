@@ -2,7 +2,7 @@ package oop;
 
 public class musicPlayerMain2 {
     public static void main(String[] args) {
-        musicPlayerData MD = new musicPlayerData();
+        MusicPlayerData MD = new MusicPlayerData();
         MD.isOn = true;
         MD.volume = 70;
         if (MD.isOn)
