@@ -2,8 +2,7 @@ package class1;
 
 public class Class_Start2 {
 	public static void main(String[] args) {
-		// 문제가 많음 위 방식은 학생이 늘어날때 마다 변수와 출력하는 코드를 추가해야하는 문제점이 있다!!
-		// 위의 문제점을 배열을 사용해보자
+		// 배열을 사용한 코드
 		String stu_names[] = { "홍길동", "장발장", "임꺽정", "로미오" };
 		int stu_ages[] = { 15, 16, 17, 20 };
 		int stu_scores[] = { 90, 80, 99, 70 };
