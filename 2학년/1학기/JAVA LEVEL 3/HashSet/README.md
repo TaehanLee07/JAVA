@@ -39,3 +39,25 @@
 - `clear()` : 모든 값 삭제
 - `size()` : HashSet 크기
 - `contains(value)` : value 값이 있는 지 확인
+
+### HashSet의 출력
+---
+- 전체 출력 : `System.out.println(변수명);`
+- HashSet은 get 메소드가 존재 하지 않아서 객체를 하나씩 가지고 올 수 없다.
+- 하나의 객체를 가져오기 위해서는 **Iterator**를 사용해야 함.
+    - 전체 객체를 대상으로 한 번씩 반복해서 가져온다.
+    - `Iterator()` 메소드를 호출하면 얻을 수 있음.
+    - `Iterator`에서 하나의 객체를 가져올 때는 `next()` 메소드를 사용함.
+    - 객체를 가져오기에 앞서 가져올 객체가 있는지 확인하기 위해 `hasNext()` 매소드를 사용해 확인하는 것이 좋음.
+        - `hasNext()` : 가져올 객체가 있으면 true 아니면 false 반환.
+    
+    ---
+    
+    - `Iterator` 사용법
+    
+    ```java
+    Iterator 변수명 = 해시셋변수명.Iterator();
+    while (변수명.hasNext()) {
+    	System.out.println(변수명.next());
+    }
+    ```
