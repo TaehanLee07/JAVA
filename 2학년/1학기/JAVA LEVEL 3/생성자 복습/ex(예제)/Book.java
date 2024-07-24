@@ -23,5 +23,4 @@ public class Book {
     void displayInfo() {
         System.out.println("제목 : " + this.title + " 저자 : " + " 페이지 : " + this.page);
     }
-
 }
