@@ -1,5 +1,3 @@
-package stu_teacherWith_Person;
-
 public class Main {
     public static void main(String[] args) {
         // student 객체 생성
@@ -16,27 +14,26 @@ public class Main {
         teacher1.addStudents(student2);
         teacher2.addStudents(student3);
 
+        Person[] people = {teacher1, teacher2, student1, student2, student3};
+
         // 정보 출력
-        System.out.println("=== Teacher Info ===");
-        PersonInfo(teacher1);
-        teacher1.showStudents();
-        teacher1.teach();
-
-        System.out.println("=== === ===");
-        PersonInfo(teacher2);
-        teacher2.showStudents();
-        teacher2.teach();
-
-        System.out.println("\n===Student Info===");
-        PersonInfo(student1);
-        System.out.println();
-        PersonInfo(student2);
-        System.out.println();
-        PersonInfo(student3);
+        printPersonInfo(people);
     }
 
-    private static void PersonInfo(Person person)  {
-        person.showInfo();
+    private static void printPersonInfo(Person[] people)  {;
+        System.out.println("=== Person Info ===");
+        for (Person person : people) {
+            if (person instanceof Teacher) {
+                person.showInfo();
+                // 다운 캐스팅 복습을 위한 코드
+                ((Teacher) person).showStudents();
+                ((Teacher) person).teach();
+                System.out.println();
+            } else {
+                person.showInfo();
+                System.out.println();
+            }
+        }
     }
 
 }
