@@ -1,5 +1,3 @@
-package Teachers_reviewClass;
-
 public class Main {
     public static void main(String[] args) {
         // student 객체 생성
