@@ -111,3 +111,5 @@ public class TestTransportMain1 {
 ```
 
 1. 메인 클래스를 리팩토링하여 중복을 최소화하여 `TestTransportMain2` 를 생성합니다.
+# 리뷰
+    - 시험은 통과했지만 시간이 부족해 리팩토링쪽에서 많이 개선하지 못한점이 아쉬운 시험이였다.
