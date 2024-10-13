@@ -113,3 +113,190 @@ public class TestTransportMain1 {
 1. 메인 클래스를 리팩토링하여 중복을 최소화하여 `TestTransportMain2` 를 생성합니다.
 # 리뷰
     - 시험은 통과했지만 시간이 부족해 리팩토링쪽에서 많이 개선하지 못한점이 아쉬운 시험이였다.
+
+# 선생님의 풀이
+
+- **Employee**
+    
+    ```java
+    package level4.test.teacher;
+    
+    public interface Employee {
+        double calculateSalary();
+        EmployeeType getEmployeeType();
+    }
+    ```
+    
+- **EmployeeType**
+    
+    ```java
+    package level4.test.teacher;
+    
+    public enum EmployeeType {
+        FULL_TIME(1.0),
+        CONTRACT(0.8),
+        INTERN(0.5);
+    
+        private final double salaryMultiplier;
+    
+        EmployeeType(double salaryMultiplier) {
+            this.salaryMultiplier = salaryMultiplier;
+        }
+    
+        public double adjustBaseSalary(double baseSalary) {
+            return baseSalary * salaryMultiplier;
+        }
+    }
+    ```
+    
+- **FullTimeEmployee implements Employee**
+    
+    ```java
+    package level4.test.teacher;
+    
+    public class FullTimeEmployee implements Employee {
+        private double baseSalary;
+        private double bonus;
+        private EmployeeType employeeType;
+    
+        public FullTimeEmployee(double baseSalary, double bonus) {
+            this.baseSalary = baseSalary;
+            this.bonus = bonus;
+            this.employeeType = EmployeeType.FULL_TIME;
+        }
+    
+        @Override
+        public double calculateSalary() {
+            return employeeType.adjustBaseSalary(baseSalary) + bonus;
+        }
+    
+        @Override
+        public EmployeeType getEmployeeType() {
+            return employeeType;
+        }
+    
+        @Override
+        public String toString() {
+            return "FullTimeEmployee{" +
+                    "baseSalary=" + baseSalary +
+                    ", bonus=" + bonus +
+                    ", employeeType=" + employeeType +
+                    '}';
+        }
+    }
+    ```
+    
+- **ContractEmployee implements Employee**
+    
+    ```java
+    package level4.test.teacher;
+    
+    public class ContractEmployee implements Employee {
+        private double baseSalary;
+        private EmployeeType employeeType;
+    
+        public ContractEmployee(double baseSalary) {
+            this.baseSalary = baseSalary;
+            this.employeeType = EmployeeType.CONTRACT;
+        }
+    
+        @Override
+        public double calculateSalary() {
+            return employeeType.adjustBaseSalary(baseSalary);
+        }
+    
+        @Override
+        public EmployeeType getEmployeeType() {
+            return employeeType;
+        }
+    
+        @Override
+        public String toString() {
+            return "ContractEmployee{" +
+                    "baseSalary=" + baseSalary +
+                    ", employeeType=" + employeeType +
+                    '}';
+        }
+    }
+    ```
+    
+- **InternEmployee implements Employee**
+    
+    ```java
+    package level4.test.teacher;
+    
+    public class InternEmployee implements Employee {
+        private double baseSalary;
+        private EmployeeType employeeType;
+    
+        public InternEmployee(double baseSalary) {
+            this.baseSalary = baseSalary;
+            this.employeeType = EmployeeType.INTERN;
+        }
+    
+        @Override
+        public double calculateSalary() {
+            return employeeType.adjustBaseSalary(baseSalary);
+        }
+    
+        @Override
+        public EmployeeType getEmployeeType() {
+            return employeeType;
+        }
+    
+        @Override
+        public String toString() {
+            return "InternEmployee{" +
+                    "baseSalary=" + baseSalary +
+                    ", employeeType=" + employeeType +
+                    '}';
+        }
+    }
+    ```
+    
+- **TestEmployee**
+    
+    ```java
+    package level4.test.teacher;
+    
+    public class TestEmployee {
+    
+        public static void main(String[] args) {
+            Employee[] employees = {
+                    new FullTimeEmployee(3000, 500),
+                    new ContractEmployee(2500),
+                    new InternEmployee(1500)
+            };
+    
+            System.out.println("Full Time Employee Salary: " + employees[EmployeeType.FULL_TIME.ordinal()].calculateSalary());
+            System.out.println("Contract Employee Salary: " + employees[EmployeeType.CONTRACT.ordinal()].calculateSalary());
+            System.out.println("Intern Employee Salary: " + employees[EmployeeType.INTERN.ordinal()].calculateSalary());
+    
+            System.out.println();
+    
+            for (Employee emp : employees) {
+                info(emp);
+            }
+        }
+    
+        private static void info(Employee emp) {
+            System.out.println(emp.toString());
+        }
+    }
+    
+    /* 다형성 활용 전
+    Employee fullTimeEmployee = new FullTimeEmployee(3000, 500);
+    Employee contractEmployee = new ContractEmployee(2500);
+    Employee internEmployee = new InternEmployee(1500);
+    
+    System.out.println("Full Time Employee Salary: " + fullTimeEmployee.calculateSalary());
+    System.out.println("Contract Employee Salary: " + contractEmployee.calculateSalary());
+    System.out.println("Intern Employee Salary: " + internEmployee.calculateSalary());
+    
+    System.out.println();
+    
+    System.out.println(fullTimeEmployee.toString());
+    System.out.println(contractEmployee.toString());
+    System.out.println(internEmployee.toString());
+    */
+    ```
