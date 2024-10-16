@@ -77,8 +77,8 @@ public class UniversalRemote implements RemoteControl {
             ((SamsungTv) pairedTv).watchNetlix();
         } else if (pairedTv instanceof LGTV) {
             ((LGTV) pairedTv).watchYoutube();
-        } else if (pairedTv instanceof APPLETV) {
-            ((APPLETV) pairedTv).watchWavve();
+        } else if (pairedTv instanceof AppleTV) {
+            ((AppleTV) pairedTv).watchWavve();
         }
         else
             System.out.println("N0 streaming available for this Tv");
@@ -86,8 +86,10 @@ public class UniversalRemote implements RemoteControl {
 
     public void adjustVolume(int level) {
         if (pairedTv != null && pairedTv.isPaired() && pairedTv.isPowerOn()) {
-            if (currentVolume >= 101 || currentVolume < 0) {
-                System.out.println("볼륨은 100을 초과 할 수 없고 0 아래로 내려갈 수 없습니다.");
+            if (level >= 101 || level < 0) {
+                currentVolume = 10;
+                System.out.println("볼륨은 100을 초과 할 수 없고 0 아래로 내려갈 수 없습니다.\n" +
+                        "기본값인 10으로 설정됩니다. 현재 볼륨: " + currentVolume);
             } else {
                 System.out.println("볼륨을 " + level + "로 설정합니다.");
                 currentVolume = level;
