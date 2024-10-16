@@ -1,6 +1,6 @@
 package remoteControl;
 
-public class UniversalRemote implements RemoteControl{
+public class UniversalRemote implements RemoteControl {
 
     private Tv pairedTv;
 
@@ -32,8 +32,7 @@ public class UniversalRemote implements RemoteControl{
         // 페어링 된 tv가 있고 tv의 전원이 켜져있을때만 가능
         if (pairedTv != null && pairedTv.isPaired() && pairedTv.isPowerOn()) {
             pairedTv.changeChannel(channel);
-        }
-        else if (pairedTv == null || !pairedTv.isPaired()) {
+        } else if (pairedTv == null || !pairedTv.isPaired()) {
             System.out.println("No Tv is paired");
         } else {
             System.out.println("The Tv is OFF. Cannot change channel");
@@ -42,10 +41,15 @@ public class UniversalRemote implements RemoteControl{
 
     @Override
     public void nextChannel() {
+        // 페어링 tv 존재 tv 전원이 연결상태여야 사용 가능
         if (pairedTv != null && pairedTv.isPaired() && pairedTv.isPowerOn()) {
-            pairedTv.changeChannel(pairedTv.getCurrentChannel() + 1);
-        }
-        else if (pairedTv == null || !pairedTv.isPaired()) {
+            int currentChannel = pairedTv.getCurrentChannel();
+            if (currentChannel == 999) {
+                pairedTv.changeChannel(0);
+            } else {
+                pairedTv.changeChannel(currentChannel + 1);
+            }
+        } else if (pairedTv == null || !pairedTv.isPaired()) {
             System.out.println("No Tv is paired");
         } else {
             System.out.println("The Tv is OFF. Cannot change channel");
@@ -55,9 +59,13 @@ public class UniversalRemote implements RemoteControl{
     @Override
     public void previousChannel() {
         if (pairedTv != null && pairedTv.isPaired() && pairedTv.isPowerOn()) {
-            pairedTv.changeChannel(pairedTv.getCurrentChannel() - 1);
-        }
-        else if (pairedTv == null || !pairedTv.isPaired()) {
+            int currentChannel = pairedTv.getCurrentChannel();
+            if (currentChannel == 0) {
+                pairedTv.changeChannel(999);
+            } else {
+                pairedTv.changeChannel(currentChannel - 1);
+            }
+        } else if (pairedTv == null || !pairedTv.isPaired()) {
             System.out.println("No Tv is paired");
         } else {
             System.out.println("The Tv is OFF. Cannot change channel");
