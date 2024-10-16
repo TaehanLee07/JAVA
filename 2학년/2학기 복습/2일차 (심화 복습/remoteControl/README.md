@@ -55,4 +55,11 @@
 이 시나리오를 바탕으로 코드를 작성하고, 시나리오가 정상적으로 작동하는지 확인하세요.
 
 ## 추가 과제
-![image](https://github.com/user-attachments/assets/ca842b2b-4a0b-44d5-b04b-1e3e7fb94deb)
+#### Tv 인터페이스 추가 기능
+- void adjustVolume(int level) 메서드 추가하고 SamsungTV 와 LGTV 에서 각각 볼륨 조절 기능을 구현
+
+#### 다른 Tv 브랜드 추가
+- AppleTv : 독자적인 스트리밍 기능 보유 (EX: Wavve 스트리밍)
+
+#### 유니버셜 리모컨에 음량 조절 기능을 추가
+- UniversalRemote 클ㄹ스에 adjustVolume(int level) 메서드를 추가하고 해당 메서드가 작동하도록 하기
