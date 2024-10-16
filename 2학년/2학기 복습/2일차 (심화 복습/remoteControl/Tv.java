@@ -8,4 +8,5 @@ public interface Tv {
     boolean isPaired(); // Tv와 리모콘의 페어링 여부 확인
     void setPair(boolean pair); // Tv와 리모컨의 페어링 상태를 설정
     String getTvName(); //  Tv의 이름 반환
+    void adjustVolume(int level);
 }
