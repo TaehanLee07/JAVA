@@ -5,6 +5,7 @@ public class SamsungTv implements Tv {
     private int currentChannel = 1; // Tv의 초기채널은 1
     private boolean powerOn = false;
     private boolean paired = false;
+    private int volume = 50;
 
 
 
@@ -58,7 +59,7 @@ public class SamsungTv implements Tv {
         if (pair) {
             System.out.println("Samsung Tv paired with remote.");
         } else {
-            System.out.println("Samsung Tv unParited from reemote");
+            System.out.println("Samsung Tv unPaired from remote");
         }
     }
 
@@ -72,10 +73,16 @@ public class SamsungTv implements Tv {
     // 2가지중
     public void watchNetlix() {
         if (powerOn) {
-            System.out.println("Samsung Tv: Now streaming Nextflix");
+            System.out.println("Samsung Tv: Now streaming Netflix");
         } else {
-                System.out.println("Samsung Tv : is off Cannot stream bettle");
+                System.out.println("Samsung Tv : is off Cannot stream");
             }
         }
+
+    @Override
+    public void adjustVolume(int level) {
+        System.out.println("볼륨을 " + level + "로 변경합니다.");
+        this.volume = level;
     }
+}
 
