@@ -5,6 +5,7 @@ public class LGTV implements Tv {
     private int currentChannel = 1; // Tv의 초기채널은 1
     private boolean powerOn = false;
     private boolean paired = false;
+    private int volume = 50;
 
 
 
@@ -14,12 +15,12 @@ public class LGTV implements Tv {
         if (paired) {
             powerOn = power;
             if (power) {
-                System.out.println("Samsung Tv is now On");
+                System.out.println("LG Tv is now On");
             } else {
-                System.out.println("Samsung Tv is now Off");
+                System.out.println("LG Tv is now Off");
             }
         } else {
-            System.out.println("Samsung Tv is not Paired");
+            System.out.println("LG Tv is not Paired");
         }
     }
 
@@ -30,10 +31,10 @@ public class LGTV implements Tv {
             this.currentChannel = channel;
             System.out.println("현재 채널은 " + channel);
         } else if (!paired) {
-            System.out.println("Samsung Tv is not Paired");
+            System.out.println("LG Tv is not Paired");
         }
         else {
-            System.out.println("Samsung Tv is OFF");
+            System.out.println("LG Tv is OFF");
         }
     }
 
@@ -56,9 +57,9 @@ public class LGTV implements Tv {
     public void setPair(boolean pair) {
         paired = pair;
         if (pair) {
-            System.out.println("Samsung Tv paired with remote.");
+            System.out.println("LG Tv paired with remote.");
         } else {
-            System.out.println("Samsung Tv unParited from reemote");
+            System.out.println("LG Tv unPaired from remote");
         }
     }
 
@@ -74,8 +75,14 @@ public class LGTV implements Tv {
         if (powerOn) {
             System.out.println("LG Tv: Now streaming Youtube");
         } else {
-            System.out.println("LG Tv : is off Cannot stream bettle");
+            System.out.println("LG Tv : is off Cannot stream");
         }
+    }
+
+    @Override
+    public void adjustVolume(int level) {
+        System.out.println("볼륨을 " + level + "로 변경합니다.");
+        this.volume = level;
     }
 }
 
