@@ -5,7 +5,7 @@ public class LGTV implements Tv {
     private int currentChannel = 1; // Tv의 초기채널은 1
     private boolean powerOn = false;
     private boolean paired = false;
-    private int volume = 50;
+    private int volume = 10;
 
 
 
@@ -81,8 +81,12 @@ public class LGTV implements Tv {
 
     @Override
     public void adjustVolume(int level) {
-        System.out.println("볼륨을 " + level + "로 변경합니다.");
-        this.volume = level;
+        if (powerOn) {
+            volume = level;
+            System.out.println("LG Tv: Volume set to" + volume);
+        } else {
+            System.out.println("LG Tv is Off Cannot adjust volume");
+        }
     }
 }
 
