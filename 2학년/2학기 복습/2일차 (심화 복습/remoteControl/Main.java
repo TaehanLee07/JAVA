@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Tv samsungTv = new SamsungTv();
         Tv lgTv = new LGTV();
-        Tv appleTv = new APPLETV();
+        Tv appleTv = new AppleTV();
         UniversalRemote remote = new UniversalRemote();
 
         // 삼성 Tv와 페어링
@@ -31,7 +31,7 @@ public class Main {
         remote.setPower(true); // 전원 on
         remote.setChannel(5); // 5번 채널로 변경
         remote.watchStreaming();
-        remote.adjustVolume(60);
+        remote.adjustVolume(200);
         remote.setPower(false);
     }
 }
