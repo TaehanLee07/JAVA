@@ -3,13 +3,13 @@ package remoteControl;
 public class UniversalRemote implements RemoteControl {
 
     private Tv pairedTv;
+    private int currentVolume = 50;
 
     // Tv와 리모컨을 페어링 하는 메소드 하나 필요함
-
     public void pairWith(Tv tv) {
         // 아마 다른 tv와 페어링 되어있을 경우
         if (pairedTv != null && pairedTv != tv) {
-            System.out.println(pairedTv.getTvName() + "s pairing has been disconnected.");
+            System.out.println(pairedTv.getTvName() + "pairing has been disconnected.");
             pairedTv.setPair(false);
         }
 
@@ -71,4 +71,33 @@ public class UniversalRemote implements RemoteControl {
             System.out.println("The Tv is OFF. Cannot change channel");
         }
     }
+    public void watchStreaming() {
+        // 페어링 된 tv가 삼성인 경우 넷플릭스가 나와야함
+        if (pairedTv instanceof SamsungTv) {
+            ((SamsungTv) pairedTv).watchNetlix();
+        } else if (pairedTv instanceof LGTV) {
+            ((LGTV) pairedTv).watchYoutube();
+        } else if (pairedTv instanceof APPLETV) {
+            ((APPLETV) pairedTv).watchWavve();
+        }
+        else
+            System.out.println("N0 streaming available for this Tv");
+    }
+
+    public void adjustVolume(int level) {
+        if (pairedTv != null && pairedTv.isPaired() && pairedTv.isPowerOn()) {
+            if (currentVolume >= 101 || currentVolume < 0) {
+                System.out.println("볼륨은 100을 초과 할 수 없고 0 아래로 내려갈 수 없습니다.");
+            } else {
+                System.out.println("볼륨을 " + level + "로 설정합니다.");
+                currentVolume = level;
+            }
+        } else if (pairedTv == null || !pairedTv.isPaired()) {
+            System.out.println("No Tv is paired");
+        } else {
+            System.out.println("The Tv is OFF. Cannot change channel");
+        }
+    }
+
+
 }
